@@ -11,14 +11,13 @@ const HeaderBar = () => {
         <nav className="flex justify-center xl:justify-between items-center relative z-30">
           <Link
             href="/"
-            className="w-40 h-12 relative flex items-center"
           >
             <Image
-              src="/images/xm_logo.png"
+              src="/images/xm_logo.svg"
               alt="xm_logo"
-              fill
               priority={true}
-              sizes="(min-width: 1040px) 224px, (min-width: 400px) 160px, calc(18.75vw + 89px)"
+              width={150}
+              height={150}
             />
           </Link>
           <div className="xl:flex gap-8 items-center hidden">
