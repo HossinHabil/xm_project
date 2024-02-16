@@ -32,7 +32,7 @@ const CryptoWidgetCard = ({
 }: Props) => {
   return (
     <Card
-      className={`w-full max-w-96 md:max-w-56 h-40 bg-gray-300 bg-opacity-10 border border-gray-400 border-opacity-20 m-auto md:max-xl:col-span-2 md:max-xl:[&:nth-last-child(2)]:col-start-2`}
+      className={`w-full max-w-96 md:max-w-56 h-40 z-20 bg-gray-300 bg-opacity-10 border border-gray-400 border-opacity-20 m-auto md:max-xl:col-span-2 md:max-xl:[&:nth-last-child(2)]:col-start-2`}
     >
       <CardHeader className="p-4 mb-3">
         <CardTitle className="flex justify-start gap-4 items-center">
