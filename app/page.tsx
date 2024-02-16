@@ -126,7 +126,7 @@ export default async function Home() {
             alt="zero_mobile_bigger"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-5 gap-x-4 gap-y-8 mb-40 relative">
+          <div className="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-5 gap-x-4 gap-y-8 mb-40 relative px-4">
             {CryptoWidgets.map((widget) => (
               <CryptoWidgetCard key={widget.id} {...widget} />
             ))}

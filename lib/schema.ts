@@ -7,7 +7,7 @@ export const RegisterSchemaStepOne = z.object({
     age: z.date()
         .refine(date => {
             const age = currentDate.getFullYear() - date.getFullYear();
-            return age >= 1;
+            return age >= 18;
         }, {
             message: "Minimum age requirements, 18 years old"
         })
