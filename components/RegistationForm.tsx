@@ -307,7 +307,6 @@ const RegistationForm = () => {
                     <FormControl>
                       <Input
                         placeholder="Enter your Email"
-                        type="email"
                         {...field}
                         className="border-teal-400 text-black placeholder:text-gray-500 rounded-none"
                       />
