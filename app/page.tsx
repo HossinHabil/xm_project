@@ -160,7 +160,7 @@ export default async function Home() {
           <p className="text-base">
             Join us to celebrate our biggest night of the year.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 px-8 md:px-0">
             {RegisterHere.map((item) => (
               <div
                 key={item.id}

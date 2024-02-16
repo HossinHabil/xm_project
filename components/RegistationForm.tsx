@@ -121,7 +121,7 @@ const RegistationForm = () => {
     setIsCompleted(true);
   };
   return (
-    <div className="max-w-[60rem] w-full m-auto space-y-10">
+    <div className="max-w-[75rem] w-full m-auto space-y-10 px-4">
       {/* Steps */}
 
       <nav aria-label="Progress">
