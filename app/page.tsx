@@ -164,9 +164,9 @@ export default async function Home() {
             {RegisterHere.map((item) => (
               <div
                 key={item.id}
-                className={`flex flex-col items-center gap-y-3 py-4 px-28 sm:px-44 md:px-6 xl:px-12 border ${
+                className={`flex flex-col items-center gap-y-3 py-4 px-8 md:px-6 xl:px-12 border ${
                   (item.id === 1 || item.id === 3) && "border-r-0 border-l-0"
-                } ${item.id === 2 && "border-r-0 border-l-0 md:border"}`}
+                } ${item.id === 2 && "border-r-0 border-l-0 md:border"} ${item.id === 1 && "border-t-0 md:border-t-[1px]"} ${item.id === 3 && "border-b-0 md:border-b-[1px]"}`}
               >
                 <Icon
                   name={item.name as keyof typeof dynamicIconImports}
@@ -198,7 +198,7 @@ export default async function Home() {
       <section className="relative flex flex-col justify-center items-center w-full bg-white py-20">
         <MaxWidthWithWrapper className="lg:px-32">
           <div className="grid grid-cols-1 lg:grid-cols-3">
-            <div className="row-span-2 py-8 xl:pl-12 flex flex-col items-center lg:items-start text-[#444444] mb-12 lg:mb-0">
+            <div className="row-span-2 py-8 xl:pl-12 flex flex-col items-center lg:items-start text-[#444444] mb-8 lg:mb-0">
               <Separator className="bg-[#D51820] w-12 h-1 ml-2" />
               <div className="flex flex-row lg:flex-col gap-2 flex-1 my-4">
                 <h2 className="text-[35px] md:text-5xl lg:text-7xl font-semibold">
