@@ -57,7 +57,7 @@ const PasswordValidation: React.FC<PasswordValidationProps> = ({
     setValidationStatus(newValidationStatus);
   }, [password]);
   return (
-    <ul>
+    <ul className="!mt-6">
       {passwordRules.map((rule) => (
         <li
           key={rule.id}
@@ -68,9 +68,10 @@ const PasswordValidation: React.FC<PasswordValidationProps> = ({
                 : "#D51820"
               : "#959595",
           }}
+          className="mb-[6px]"
         >
-          <span className="flex items-center gap-x-4 lg:gap-x-8">
-            <CircleDot className="min-w-4 min-h-4" />
+          <span className="flex items-center gap-x-4 lg:gap-x-6">
+            <div className="min-w-4 min-h-4"><CircleDot /></div>
             {rule.message}
           </span>
         </li>

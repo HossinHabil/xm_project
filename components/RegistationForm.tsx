@@ -12,6 +12,7 @@ import {
   FormControl,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Calendar } from "@/components/ui/calendar";
@@ -199,7 +200,8 @@ const RegistationForm = () => {
                 control={stepOneform.control}
                 name="fullName"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="text-left">
+                    <FormLabel>Full Name</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Full Name"
@@ -224,7 +226,8 @@ const RegistationForm = () => {
                 control={stepOneform.control}
                 name="age"
                 render={({ field }) => (
-                  <FormItem className="flex flex-col">
+                  <FormItem className="flex flex-col items-start justify-end">
+                    <FormLabel>Date of Birth:</FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
@@ -295,7 +298,8 @@ const RegistationForm = () => {
                 control={stepTwoform.control}
                 name="email"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="text-left">
+                    <FormLabel>Email:</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Enter your Email"
@@ -320,12 +324,13 @@ const RegistationForm = () => {
                 control={stepTwoform.control}
                 name="password"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="text-left">
+                    <FormLabel>Password:</FormLabel>
                     <FormControl>
                       <Input
                         placeholder="Enter your Password"
                         {...field}
-                        className="border-teal-400 text-black placeholder:text-gray-500 rounded-none mb-4"
+                        className="border-teal-400 text-black placeholder:text-gray-500 rounded-none"
                       />
                     </FormControl>
                     <PasswordValidation
