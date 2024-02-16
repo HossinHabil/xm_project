@@ -52,6 +52,8 @@ const RegistationForm = () => {
 
   const [isCompleted, setIsCompleted] = useState(false);
 
+  const [trackPassword, setTrackPassword] = useState(false);
+
   const stepOneform = useForm<z.infer<typeof RegisterSchemaStepOne>>({
     resolver: zodResolver(RegisterSchemaStepOne),
     defaultValues: {
@@ -114,12 +116,14 @@ const RegistationForm = () => {
   };
 
   const onSubmitStepTwo = (data: z.infer<typeof RegisterSchemaStepTwo>) => {
-    setStep2Progress(100);
-    const collectedData = {
-      ...stepOneData,
-      ...data,
-    };
-    setIsCompleted(true);
+    if (trackPassword) {
+      setStep2Progress(100);
+      const collectedData = {
+        ...stepOneData,
+        ...data,
+      };
+      setIsCompleted(true);
+    }
   };
   return (
     <div className="max-w-[75rem] w-full m-auto space-y-10 px-4">
@@ -303,6 +307,7 @@ const RegistationForm = () => {
                     <FormControl>
                       <Input
                         placeholder="Enter your Email"
+                        type="email"
                         {...field}
                         className="border-teal-400 text-black placeholder:text-gray-500 rounded-none"
                       />
@@ -329,6 +334,7 @@ const RegistationForm = () => {
                     <FormControl>
                       <Input
                         placeholder="Enter your Password"
+                        type="password"
                         {...field}
                         className="border-teal-400 text-black placeholder:text-gray-500 rounded-none"
                       />
@@ -336,6 +342,7 @@ const RegistationForm = () => {
                     <PasswordValidation
                       password={field.value}
                       isTouched={stepTwoform.formState.dirtyFields.password}
+                      setTrackPassword={setTrackPassword}
                     />
                   </FormItem>
                 )}

@@ -40,11 +40,13 @@ const passwordRules: PasswordRule[] = [
 type PasswordValidationProps = {
   password: string;
   isTouched: boolean | undefined;
+  setTrackPassword: (value: boolean) => void;
 };
 
 const PasswordValidation: React.FC<PasswordValidationProps> = ({
   password,
   isTouched,
+  setTrackPassword,
 }) => {
   const [validationStatus, setValidationStatus] = useState<
     Record<string, boolean>
@@ -55,6 +57,18 @@ const PasswordValidation: React.FC<PasswordValidationProps> = ({
       newValidationStatus[rule.id] = rule.test(password);
     }
     setValidationStatus(newValidationStatus);
+  }, [password]);
+
+  useEffect(() => {
+    const newValidationStatus: Record<string, boolean> = {};
+    for (const rule of passwordRules) {
+      newValidationStatus[rule.id] = rule.test(password);
+    }
+    setValidationStatus(newValidationStatus);
+  
+    if (Object.values(newValidationStatus).every(value => value)) {
+      setTrackPassword(true);
+    }
   }, [password]);
   return (
     <ul className="!mt-6">
