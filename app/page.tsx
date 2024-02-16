@@ -122,7 +122,7 @@ export default async function Home() {
             src="/images/tradewithxm/zero_mobile_bigger.svg"
             width={200}
             height={200}
-            className="absolute !right-[-6rem] !top-[-8rem] md:hidden"
+            className="absolute !right-[-6rem] !top-[-8rem] md:hidden z-10"
             alt="zero_mobile_bigger"
           />
 
