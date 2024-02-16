@@ -77,9 +77,9 @@
 
 @layer components {
   .bgOverlay {
-    /* background: linear-gradient(180deg, rgba(32,46,71,1) 0%, rgba(36,39,45,1) 99%); */
-    /* background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(29, 47, 52, 0.5) 5%); */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(32, 46, 71, 0.5));
+    background: 
+      linear-gradient(to top, rgba(0, 0, 0, 0), rgba(16, 25, 23, 0.6)), 
+      linear-gradient(to right, rgba(0, 0, 0, 0), rgba(16, 50, 23, 0.2));
   }
 }
 
