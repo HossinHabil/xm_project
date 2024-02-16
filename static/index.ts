@@ -99,28 +99,28 @@ export const TradeWithXm = [
     title: "Superior Trade Execution",
     description:
       "<strong style='font-weight: 600'>99%</strong> of trades are executed in <strong style='font-weight: 600'>less than a second</strong>, with no requotes or rejections.",
-    image: "/images/tradeWithxm/fast-execusion-icon.svg",
+    image: "/images/tradewithxm/fast_execusion_icon.svg",
   },
   {
     id: 2,
     title: "Competitive Pricing",
     description:
       "We offer some of the <strong style='font-weight: 600'>lowest spreads</strong> and we don't charge commissions.",
-    image: "/images/tradeWithxm/competitive-pricing-icon.svg",
+    image: "/images/tradewithxm/competitive_pricing_icon.svg",
   },
   {
     id: 3,
     title: "Advanced Technology",
     description:
       "Trade on <strong style='font-weight: 600'>MT4</strong> or <strong style='font-weight: 600'>MT5</strong>, with expert tools, across desktop, web and mobile.",
-    image: "/images/tradeWithxm/tech-icon.svg",
+    image: "/images/tradewithxm/tech_icon.svg",
   },
   {
     id: 4,
     title: "Start with $5",
     description:
       "Start trading your preferred instruments with as little as a <strong style='font-weight: 600'>$5 minimum deposit.</strong>",
-    image: "/images/tradeWithxm/dollar-icon.svg",
+    image: "/images/tradewithxm/dollar_icon.svg",
   },
 ];
 
